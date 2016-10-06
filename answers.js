@@ -47,7 +47,6 @@ function printPositives(nums){
 printPositives([1,-1,2,3,-3,4,5,6,7,-4,-56,8,112,3323,54,2343,76,-2,-3,-56]);
 
 
-*/
 
 
 function filterArray(filterFunction, theArray){
@@ -59,3 +58,20 @@ var x = filterArray(function (num){
 }, [1,2,3,4,5,6,7,8,9,4,3,21,6,454,2,6,7,89,-5,-3,-200,4,3,4,3,4,-4,6,7]);
 
 console.log(x)
+*/
+
+function findLongestWord(longest, thisWord){
+    if (longest.length < thisWord.length){
+        longest =  thisWord;
+    }
+    return longest;
+    
+}
+
+function longestWord(str){
+    var strArray = str.split(" ");
+    var longWord = strArray.reduce(findLongestWord, "");
+    console.log(longWord);
+}
+
+longestWord("the quick brown fox jumped over the lazy goats so fast loud noisesssssSSSS");
