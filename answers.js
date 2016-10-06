@@ -148,10 +148,10 @@ var highLowTwoObject = theArray.reduce(function(obj, num){
 console.log(highLowTwoObject);
 
 
-*/
 
 
-// 
+
+ 
 
 function countChars(str){
     var strArray = str.split("");
@@ -178,3 +178,47 @@ function countChars(str){
 
 countChars("abbcccddddeeeeeffffffgggggggg");
 
+*/
+
+
+
+
+var theArrayOfPeople = [
+  {
+    "id": "KeXoYg92is",
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "john@smith.com"
+  },
+  {
+    "id": "NkALmSWtUp",
+    "firstName": "Donald",
+    "lastName": "Duck",
+    "email": "don@disney.com"
+  },
+  {
+    "id": "m7LPbJYSUg",
+    "firstName": "John",
+    "lastName": "Vader",
+    "email": "vader@darkside.com"
+  },
+  {
+      "id": "the greatest",
+      "firstName": "James",
+      "lastName" : "Krug",
+      "email": "none of your business"
+  },
+  {
+      "id": "the worst",
+      "firstName": "everyone",
+      "lastName": "else",
+      "email": "losers@loserville.com"
+  }
+];
+
+var peopleById = theArrayOfPeople.reduce(function(peopleArray, x, idx){
+    peopleArray[theArrayOfPeople[idx].id] = theArrayOfPeople[idx];
+    return peopleArray;
+}, {});
+
+console.log(peopleById);
