@@ -58,7 +58,6 @@ var x = filterArray(function (num){
 }, [1,2,3,4,5,6,7,8,9,4,3,21,6,454,2,6,7,89,-5,-3,-200,4,3,4,3,4,-4,6,7]);
 
 console.log(x)
-*/
 
 function findLongestWord(longest, thisWord){
     if (longest.length < thisWord.length){
@@ -75,3 +74,23 @@ function longestWord(str){
 }
 
 longestWord("the quick brown fox jumped over the lazy goats so fast loud noisesssssSSSS");
+
+*/
+
+function findVowels(total, currentLetter){
+    if (currentLetter == "a" || currentLetter == "e" || currentLetter == "i" || currentLetter == "o" || currentLetter == "u"){
+        total++;
+    }
+    return total;
+}
+
+function countVowels(str){
+    var letterArray = str.split("");
+
+    var amountOfVowels = letterArray.reduce(findVowels, 0);
+    console.log(amountOfVowels);
+}
+
+countVowels("there are a lot of vowels in this sentence");
+
+
