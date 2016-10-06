@@ -30,7 +30,6 @@ getPositives([1,-1,2,3,-3,4,5,6,7,-4,-56,8,112,3323,54,2343,76,-2,-3,-56]);
 console.log(filteredResults);
 
 
-*/
 
 function printNumber(num){
     console.log("a positive number" + num);
@@ -48,3 +47,15 @@ function printPositives(nums){
 printPositives([1,-1,2,3,-3,4,5,6,7,-4,-56,8,112,3323,54,2343,76,-2,-3,-56]);
 
 
+*/
+
+
+function filterArray(filterFunction, theArray){
+    return theArray.filter(filterFunction);
+}
+
+var x = filterArray(function (num){
+    return num >= 5;
+}, [1,2,3,4,5,6,7,8,9,4,3,21,6,454,2,6,7,89,-5,-3,-200,4,3,4,3,4,-4,6,7]);
+
+console.log(x)
