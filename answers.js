@@ -75,7 +75,6 @@ function longestWord(str){
 
 longestWord("the quick brown fox jumped over the lazy goats so fast loud noisesssssSSSS");
 
-*/
 
 function findVowels(total, currentLetter){
     if (currentLetter == "a" || currentLetter == "e" || currentLetter == "i" || currentLetter == "o" || currentLetter == "u"){
@@ -92,5 +91,30 @@ function countVowels(str){
 }
 
 countVowels("there are a lot of vowels in this sentence");
+*/
 
 
+function findHighestNumber (highest, x){
+    if (highest < x){
+        highest = x;
+    }
+    return highest;
+}
+
+function findLowestNumber (lowest, x){
+    if (lowest > x){
+        lowest = x;
+    }
+    return lowest;
+}
+
+
+function highLow(theArray){
+    var tempObject = {}
+    tempObject.highest = theArray.reduce(findHighestNumber, -Infinity);
+    tempObject.lowest = theArray.reduce(findLowestNumber, Infinity);
+    return tempObject;
+}
+
+highLowNum = highLow([1,2,3,4,5,6,84,-200,1111, -8962]);
+console.log(highLowNum);
