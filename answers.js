@@ -13,7 +13,6 @@ var positiveNums = [];
 printPositives([1,-1,2,3,-3,4,5,6,7,-4,-56,8,112,3323,54,2343,76,-2,-3,-56]);
 console.log(positiveNums);
 
-*/
 
 
 function filterPositives(num){
@@ -29,5 +28,23 @@ function getPositives(nums){
 var filteredResults = [];
 getPositives([1,-1,2,3,-3,4,5,6,7,-4,-56,8,112,3323,54,2343,76,-2,-3,-56]);
 console.log(filteredResults);
+
+
+*/
+
+function printNumber(num){
+    console.log("a positive number" + num);
+}
+
+function filterPositives(num){
+    return num >= 0
+}
+
+function printPositives(nums){
+    nums.filter(filterPositives).forEach(printNumber);
+}
+
+
+printPositives([1,-1,2,3,-3,4,5,6,7,-4,-56,8,112,3323,54,2343,76,-2,-3,-56]);
 
 
