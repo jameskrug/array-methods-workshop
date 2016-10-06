@@ -91,7 +91,6 @@ function countVowels(str){
 }
 
 countVowels("there are a lot of vowels in this sentence");
-*/
 
 
 function findHighestNumber (highest, x){
@@ -118,4 +117,36 @@ function highLow(theArray){
 
 var highLowNum = highLow([1,2,3,4,5,6,84,-200,1111, -8962]);
 console.log(highLowNum);
+
+*/
+
+
+
+
+var theArray = [4,3,2,1,6,9,-65,-31,44,532];
+var highLowTwoObject = theArray.reduce(function(obj, num){
+    if (num > obj.secondHighest){
+        obj.secondHighest=num;
+        if (num > obj.highest){
+            obj.secondHighest = obj.highest; 
+            obj.highest = num;
+        }
+    }
+    
+    if (num < obj.secondLowest){
+        obj.secondLowest=num;
+        if (num < obj.lowest){
+            obj.secondLowest = obj.lowest; 
+            obj.lowest = num;
+        }
+    }
+    
+    return obj;
+}, {highest: -Infinity,
+    secondHighest: -Infinity,
+    lowest: Infinity,
+    secondLowest: Infinity
+})
+console.log(highLowTwoObject);
+
 
