@@ -116,5 +116,6 @@ function highLow(theArray){
     return tempObject;
 }
 
-highLowNum = highLow([1,2,3,4,5,6,84,-200,1111, -8962]);
+var highLowNum = highLow([1,2,3,4,5,6,84,-200,1111, -8962]);
 console.log(highLowNum);
+
