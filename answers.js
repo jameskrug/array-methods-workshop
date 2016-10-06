@@ -118,8 +118,6 @@ function highLow(theArray){
 var highLowNum = highLow([1,2,3,4,5,6,84,-200,1111, -8962]);
 console.log(highLowNum);
 
-*/
-
 
 
 
@@ -149,4 +147,34 @@ var highLowTwoObject = theArray.reduce(function(obj, num){
 })
 console.log(highLowTwoObject);
 
+
+*/
+
+
+// 
+
+function countChars(str){
+    var strArray = str.split("");
+    var obj = {};
+    
+    
+    
+    obj = strArray.reduce(function(acc, char){
+        if (char != " "){
+            if(acc[char]) {
+                acc[char] += 1
+            } else {
+                acc[char] = 1
+            }
+        }
+        return acc;
+        
+    }, {})
+    
+    console.log(obj)
+
+    
+} 
+
+countChars("abbcccddddeeeeeffffffgggggggg");
 
