@@ -178,8 +178,6 @@ function countChars(str){
 
 countChars("abbcccddddeeeeeffffffgggggggg");
 
-*/
-
 
 
 
@@ -222,3 +220,64 @@ var peopleById = theArrayOfPeople.reduce(function(peopleArray, x, idx){
 }, {});
 
 console.log(peopleById);
+
+*/
+
+
+var theArrayOfPeople = [
+  {
+    "id": "KeXoYg92is",
+    "firstName": "John",
+    "lastName": "Smith",
+    "email": "john@smith.com"
+  },
+  {
+    "id": "NkALmSWtUp",
+    "firstName": "Donald",
+    "lastName": "Duck",
+    "email": "don@disney.com"
+  },
+  {
+    "id": "m7LPbJYSUg",
+    "firstName": "John",
+    "lastName": "Vader",
+    "email": "vader@darkside.com"
+  },
+  {
+      "id": "the greatest",
+      "firstName": "James",
+      "lastName" : "Krug",
+      "email": "none of your business"
+  },
+  {
+      "id": "the worst",
+      "firstName": "everyone",
+      "lastName": "else",
+      "email": "losers@loserville.com"
+  },
+  {
+      "id": "James",
+      "firstName": "James",
+      "lastName": "notKrug",
+      "email": "stuff@morestuff.ca"
+  }
+];
+
+
+
+var peopleByFirstName = theArrayOfPeople.reduce(function(obj, curr, idx){
+        // console.log(curr.firstName)
+        // console.log(peopleArray)
+        if (obj[curr.firstName]){
+             obj[curr.firstName].push(curr);
+        }
+        else{
+            obj[curr.firstName] = [];
+             obj[curr.firstName].push(curr);
+        }
+            
+       
+    return obj;
+}, {});
+
+console.log(peopleByFirstName);
